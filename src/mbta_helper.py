@@ -1,11 +1,10 @@
-import urllib.request   # urlencode function
-import json
-
-
 # Useful URLs (you need to add the appropriate parameters for your requests)
-GMAPS_BASE_URL = "https://maps.googleapis.com/maps/api/geocode/json"
-MBTA_BASE_URL = "http://realtime.mbta.com/developer/api/v2/stopsbylocation"
-MBTA_DEMO_API_KEY = "wX9NwuHnZU2ToO7GmGR9uw"
+MAPQUEST_BASE_URL = "http://open.mapquestapi.com/geocoding/v1/address"
+MBTA_BASE_URL = "https://api-v3.mbta.com/stops"
+
+# Your API KEYS (you need to use your own keys - very long random characters)
+MAPQUEST_API_KEY = ""
+MBTA_API_KEY = ""
 
 
 # A little bit of scaffolding if you want to use it
@@ -22,25 +21,35 @@ def get_lat_long(place_name):
     """
     Given a place name or address, return a (latitude, longitude) tuple
     with the coordinates of the given place.
-    See https://developers.google.com/maps/documentation/geocoding/
-    for Google Maps Geocode API URL formatting requirements.
+    See https://developer.mapquest.com/documentation/geocoding-api/address/get/
+    for Mapquest Geocoding  API URL formatting requirements.
     """
     pass
 
 
 def get_nearest_station(latitude, longitude):
     """
-    Given latitude and longitude strings, return a (station_name, distance)
+    Given latitude and longitude strings, return a (station_name, wheelchair_accessible)
     tuple for the nearest MBTA station to the given coordinates.
-    See http://realtime.mbta.com/Portal/Home/Documents for URL
-    formatting requirements for the 'stopsbylocation' API.
+    See https://api-v3.mbta.com/docs/swagger/index.html#/Stop/ApiWeb_StopController_index for URL
+    formatting requirements for the 'GET /stops' API.
     """
     pass
 
 
 def find_stop_near(place_name):
     """
-    Given a place name or address, return the nearest MBTA stop and the 
-    distance from the given place to that stop.
+    Given a place name or address, return the nearest MBTA stop and whether it is wheelchair accessible.
     """
     pass
+
+
+def main():
+    """
+    You can all the functions here
+    """
+    pass
+
+
+if __name__ == '__main__':
+    main()

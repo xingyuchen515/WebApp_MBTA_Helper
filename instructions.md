@@ -19,7 +19,7 @@ You may have used multiple Python packages to access information on the Internet
 
 ## Part 1: Geocoding and Web APIs
 
-The goal for Part 1 to deal with geographical data. You will write a tool that takes an address or place name and returns the closest MBTA stop and the distance from the given place to that stop. For example: 
+The goal for Part 1 to deal with geographical data. You will write a tool that takes an address or place name and returns the closest MBTA stop and whether it is wheelchair accessible. For example: 
     
     >>>import mbta_helper
     >>>print(mbta_helper.find_stop_near("Boston Common"))
